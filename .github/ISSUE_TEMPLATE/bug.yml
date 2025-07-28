@@ -1,7 +1,7 @@
 name: Issue about a bug
 description: Make a suggestion to resolve a bug.
 title: "[Bug] "
-projects: ["Arknights mcp"]
+projects: ["gjeodnd12165/4"]
 labels: ["bug"]
 body:
   - type: textarea
