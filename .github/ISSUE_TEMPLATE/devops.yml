@@ -1,7 +1,7 @@
 name: Issue about a new devops feature
 description: Make a suggestion to improve the devops pipeline.
 title: "[DevOps] "
-projects: ["Arknights mcp"]
+projects: ["gjeodnd12165/4"]
 labels: ["enhancement"]
 body:
   - type: textarea

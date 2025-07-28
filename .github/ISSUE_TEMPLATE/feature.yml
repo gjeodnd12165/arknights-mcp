@@ -1,7 +1,7 @@
 name: Issue about a new feature
 description: Make a suggestion to improve the feature.
 title: "[Feature] "
-projects: ["Arknights mcp"]
+projects: ["gjeodnd12165/4"]
 labels: ["enhancement"]
 body:
   - type: textarea
