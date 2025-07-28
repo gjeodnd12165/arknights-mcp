@@ -1,7 +1,8 @@
 name: Issue about a documentation
 description: Make a suggestion to improve the document.
-labels:
-  - documentation
+title: "[Documentation] "
+projects: ["Arknights mcp"]
+labels: ["documentation"]
 body:
   - type: textarea
     attributes:
