@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "arknights-mcp"
+dynamic = ["version"]
+description = 'Arknights mcp server for my own use'
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "gjeodnd12165", email = "gjeodnd12165@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    "fastmcp>=2.10.6",
+    "gitpython>=3.1.45",
+    "pymongo>=4.13.2",
+]
+
+[project.urls]
+Documentation = "https://github.com/gjeodnd12165/arknights-mcp#readme"
+Issues = "https://github.com/gjeodnd12165/arknights-mcp/issues"
+Source = "https://github.com/gjeodnd12165/arknights-mcp"
+
+[project.scripts]
+server = "arknights_mcp:main"
+
+[tool.hatch.version]
+path = "src/arknights_mcp/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/arknights_mcp tests}"
+
+[tool.coverage.run]
+source_pkgs = ["arknights_mcp", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/arknights_mcp/__about__.py",
+]
+
+[tool.coverage.paths]
+arknights_mcp = ["src/arknights_mcp", "*/arknights-mcp/src/arknights_mcp"]
+tests = ["tests", "*/arknights-mcp/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
